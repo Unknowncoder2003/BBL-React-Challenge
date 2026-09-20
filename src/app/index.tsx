@@ -2,13 +2,15 @@ import { useEffect, useState } from "react";
 import { StyleSheet, Text, FlatList, Pressable, Image, View} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Float } from "react-native/Libraries/Types/CodegenTypesNamespace";
+//import { createStaticNavigation, useNavigation, } from '@react-navigation/native';
+//import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-type ratings = {
+export type ratings = {
   rate: number;
   count: number;  
 };
 
-type Product = {
+export type Product = {
   id: number;
   title: string;
   price: number;
@@ -20,7 +22,7 @@ type Product = {
 
 export default function Index() {
   //const [name, setName] = useState(0);
-
+  //const navigation = useNavigation();
   const [products, setProducts] = useState<Product[]>([]);
   
   const getFromApi = () => {
